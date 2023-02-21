@@ -1,7 +1,7 @@
 <?php
 include __DIR__ . '/FoodProduct.php';
 include __DIR__ . '/ToyProduct.php';
-
+include __DIR__ . '/Kennel.php';
 $croccantini = new FoodProduct('Croccantini', '15€', 'Virtus Dog Adult Rustic, alimento secco completo per cani adulti di qualsiasi razza e taglia, ricco di materie prime di origine animale.', $dog, 'https://starpng.com/public/uploads/preview/dog-food-png-transparent-clipart-11582228802youfysa2yq.png', 'Virtus Dog Adult Rustic', 'Pesce', '2kg');
 
 $larix = new ToyProduct('Tiragraffi Ottava', '14.40€', 'Il tiragraffi Ottawa di Lovedì è un fantastico graffiatoio utile per far scaricare il tuo felino grazie alla pallina in peluche. Il graffiatoio ha una pallina situata', $cat, 'https://www.shutterstock.com/image-photo/beautiful-cat-scratching-post-600w-529038967.jpg', 'plastic', 'beige');
