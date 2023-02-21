@@ -12,11 +12,11 @@ require_once __DIR__ . '/Category.php';
 
 class Product
 {
-    public $name;
-    public $price;
-    public $description;
-    public $category;
-    public $img;
+    protected $name;
+    protected $price;
+    protected $description;
+    protected $category;
+    protected $img;
 
     public function __construct($name, $price, $description, Category $category, $img)
     {
@@ -27,9 +27,29 @@ class Product
         $this->img = $img;
     }
 
+    public function getName()
+    {
+        return $this->name;
+    }
+
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    public function getImg()
+    {
+        return $this->img;
     }
 }
 

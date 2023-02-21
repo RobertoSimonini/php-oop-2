@@ -6,7 +6,7 @@ $croccantini = new FoodProduct('Croccantini', '15€', 'Virtus Dog Adult Rustic,
 
 $larix = new ToyProduct('Tiragraffi Ottava', '14.40€', 'Il tiragraffi Ottawa di Lovedì è un fantastico graffiatoio utile per far scaricare il tuo felino grazie alla pallina in peluche. Il graffiatoio ha una pallina situata', $cat, 'https://www.shutterstock.com/image-photo/beautiful-cat-scratching-post-600w-529038967.jpg', 'plastic', 'beige');
 
-$articles = [$croccantini, $larix];
+$products = [$croccantini, $larix];
 
 ?>
 
@@ -36,15 +36,15 @@ $articles = [$croccantini, $larix];
     </h1>
     <div class="container">
         <div class="row g-3 justify-content-center">
-            <?php foreach ($articles as $article) : ?>
+            <?php foreach ($products as $product) : ?>
                 <div class="col-4">
                     <div class="card text-center" style="height: 750px !important">
-                        <img src="<?= $article->img ?>" class="card-img-top h-50" alt="...">
+                        <img src="<?= $product->getImg() ?>" class="card-img-top h-50" alt="...">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                            <h3 class="card-title"><?= $article->name ?></h3>
-                            <p class="card-text"><?= $article->description ?></p>
-                            <h2><?= $article->category->name ?></h2>
-                            <h5 class="card-title"><?= $article->price ?></h5>
+                            <h3 class="card-title"><?= $product->getName() ?></h3>
+                            <p class="card-text"><?= $product->getDescription() ?></p>
+                            <h2><?= $product->getCategory()->name ?></h2>
+                            <h5 class="card-title"><?= $product->getPrice() ?></h5>
                         </div>
                     </div>
                 </div>
