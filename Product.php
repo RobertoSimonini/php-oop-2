@@ -8,23 +8,30 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
 Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia ecc).
 */
 
-require_once __DIR__ . '/Categories.php';
+require_once __DIR__ . '/Category.php';
 
 class Product
 {
+    public $name;
     public $price;
     public $description;
-    public $categorie;
+    public $category;
     public $img;
 
-    public function __construct($price, $description, Categorie $categorie, $img)
+    public function __construct($name, $price, $description, Category $category, $img)
     {
+        $this->name = $name;
         $this->price = $price;
         $this->description = $description;
-        $this->categorie = $categorie;
+        $this->category = $category;
         $this->img = $img;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
     }
 }
 
-$dog = new Categorie('<i class="fa-solid fa-dog"></i>');
-$cat = new Categorie('<i class="fa-solid fa-cat"></i>');
+$dog = new Category('<i class="fa-solid fa-dog"></i>');
+$cat = new Category('<i class="fa-solid fa-cat"></i>');
